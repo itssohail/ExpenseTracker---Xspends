@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseTracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Xspends</div>
+            <div class="profile-menu">
+                <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+                <span class="username">Sohail</span>
+            </div>
+        </nav>
+
+        <main>
+            <div class="dashboard">
+                <div class="summary-cards">
+                    <div class="card">
+                        <h3>Total Balance</h3>
+                        <p class="amount"> &#8377;2,450.00</p>
+                    </div>
+                    <div class="card">
+                        <h3>Monthly Expenses</h3>
+                        <p class="amount"> &#8377;850.00</p>
+                    </div>
+                    <div class="card">
+                        <h3>Monthly Income</h3>
+                        <p class="amount"> &#8377;3,300.00</p>
+                    </div>
+                </div>
+
+                <div class="expense-section">
+                    <div class="section-header">
+                        <h2>Recent Transactions</h2>
+                        <button class="add-expense-btn">+ Add Expense</button>
+                    </div>
+
+                    <div class="transactions">
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Groceries</h4>
+                                <p>Supermarket</p>
+                            </div>
+                            <div class="transaction-amount expense">
+                                - &#8377;120.50
+                            </div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Rent</h4>
+                                <p>Monthly Rent</p>
+                            </div>
+                            <div class="transaction-amount expense">
+                                - &#8377;800.00
+                            </div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Salary</h4>
+                                <p>Monthly Income</p>
+                            </div>
+                            <div class="transaction-amount income">
+                                + &#8377;3,300.00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for adding new expense -->
+    <div class="modal" id="expenseModal">
+        <div class="modal-content">
+            <h2>Add New Transaction</h2>
+            <form id="expenseForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="shopping">Shopping</option>
+                        <option value="food">Food</option>
+                        <option value="housing">Housing</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Add Transaction</button>
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
